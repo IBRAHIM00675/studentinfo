@@ -52,10 +52,6 @@ body {
   text-decoration: none;
 }
 
-
-
-
-
 form {
   margin: 20rem;
   display: flex;
@@ -66,9 +62,9 @@ form {
   max-width: 200px;
 }
 form input{
-  padding: 6px 40px;
+  padding: 13px;
+  padding-right: 180px;
   border-radius: 5px;
- 
 
 }
 form label{
