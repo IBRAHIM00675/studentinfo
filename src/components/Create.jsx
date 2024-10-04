@@ -1,8 +1,16 @@
+import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 
 const Create = () => {
+
+  const [data, setData] = useState({
+    name : "",
+    email: "",
+    phone_number: "",
+    course:""
+  })
 
 
 
