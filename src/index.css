@@ -84,3 +84,10 @@ form label{
   color: white;
 }
 
+#btn {
+  background-color: #553ec5;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  margin-top: 1.2rem;
+}
+
