@@ -24,7 +24,7 @@ const Create = () => {
 
   const handleSubmit =(e) => {
     e.preventDefault()
-    axios.post('http://localhost:4000/studentinfo', data)
+    axios.post('http://localhost:4000/studentinfo1', data)
     .then(res =>{
 
       toast.success('student info added successfully',{
