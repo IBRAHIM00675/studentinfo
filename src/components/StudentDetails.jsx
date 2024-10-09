@@ -22,6 +22,7 @@ const StudentDetails = () => {
     }
   }, [student]);
 
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -44,7 +45,7 @@ const StudentDetails = () => {
   };
 
   if (isLoading) {
-    return <p>Loading...</p>; // or any loading indicator
+    return <p>Loading...</p>; 
   }
 
   return (
