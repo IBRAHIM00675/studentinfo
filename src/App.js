@@ -1,8 +1,9 @@
 import React from "react"
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router } from "react-router-dom";
-import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Create from "./components/Create";
+import Home from "./components/Home";
+import StudentDetails from "./components/StudentDetails";
 
 
 
@@ -19,14 +20,18 @@ function App() {
 
       <Switch>
         
-        {/* <Route exact path='/'>
+        <Route exact path='/'>
           <Home/>
-        </Route>   */}
+        </Route>  
+
         <Route path='/create'>
           <Create/>
         </Route>
 
-
+        <Route path='/student-details/:id'>
+          <StudentDetails/>
+        </Route>
+        
 
       </Switch> 
 

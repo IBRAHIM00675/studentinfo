@@ -85,9 +85,118 @@ form label{
 }
 
 #btn {
-  background-color: #553ec5;
   border: none;
   padding: 0.7rem 1.5rem;
   margin-top: 1.2rem;
+}
+
+.student-list {
+  display: flex;            
+  justify-content: center;  
+  align-items: center;      
+  flex-direction: column;   
+  margin: 20px;            
+}
+
+.table {
+  width: 70%;              
+  border-collapse: collapse; 
+  border-radius: 10px;     
+  overflow: hidden;        
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.table thead th {
+  background-color: black; 
+  color: white;              
+  text-align: center;  
+  padding: 20px;      
+}
+
+.table tbody tr {
+  transition: background-color 0.3s; 
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1; 
+}
+
+.table td {
+  padding: 12px;            
+  text-align: center;       
+}
+
+.btn-container {
+  display: flex;             
+  justify-content: center;   
+  gap: 10px;                 
+}
+
+.small-button {
+  padding: 8px 10px;         
+  font-size: 12px;           
+}
+
+.student-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.student-details h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.student-details p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.student-details form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.student-details form input {
+  padding: 13px;
+  padding-right: 180px;
+  border-radius: 5px;
+}
+
+.student-details form label {
+  font-size: large;
+  font-weight: bolder;
+}
+
+.student-details button {
+  margin-top: 20px;
+  display: block;
+  background-color: black;
+  padding: 0.5rem 1.0rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: fit-content;
+  color: #fff;
+}
+
+.delete-btn {
+  background-color: red;
+  color: white;
+}
+
+.edit-btn {
+  background-color: blue;
+  color: white;
 }
 
