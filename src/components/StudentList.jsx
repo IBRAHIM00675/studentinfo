@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { Button, Table, Alert } from 'react-bootstrap'; // Import Alert
+import { Button, Table, Alert } from 'react-bootstrap'; 
 import axios from 'axios';
 
 const StudentList = ({ students }) => {
