@@ -6,8 +6,6 @@ import Home from "./components/Home";
 import StudentDetails from "./components/StudentDetails";
 
 
-
-
 function App() {
   return (
    <Router>
