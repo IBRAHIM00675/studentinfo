@@ -34,7 +34,6 @@ const Create = () => {
       return;
     }
 
-
     axios.post('http://localhost:4000/studentinfo', data)
       .then(res => {
         toast.success('Student info added successfully', {
