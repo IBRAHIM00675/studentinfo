@@ -44,7 +44,6 @@ body {
 .nav-links {
   display: flex;
   gap: 1rem;
-  /* color: blueviolet; */
 }
 
 .nav-links #links {
