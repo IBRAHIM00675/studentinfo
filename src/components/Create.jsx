@@ -25,15 +25,6 @@ const Create = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Basic form validation
-    if (!data.name || !data.email || !data.phone_number || !data.course) {
-      toast.error('Please fill in all fields', {
-        position: toast.POSITION.TOP_RIGHT,
-        autoClose: 3000,
-      });
-      return;
-    }
-
     axios.post('http://localhost:4000/studentinfo', data)
       .then(res => {
         toast.success('Student info added successfully', {

@@ -1,3 +1,11 @@
 {
-  "studentinfo": []
+  "studentinfo": [
+    {
+      "id": "7636",
+      "name": "ibrahim musa",
+      "email": "ibra@gmail.com",
+      "phone_number": "+254799921345",
+      "course": "Diploma Software Developer"
+    }
+  ]
 }

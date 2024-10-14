@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import useFetch from "./UseFetch";
-import { Button, Alert } from "react-bootstrap";
 import axios from "axios";
 
 const StudentDetails = () => {
   const { id } = useParams();
-  const { data: student, isLoading } = useFetch(`http://localhost:4000/students/${id}`);
+  const { data: student} = useFetch(`http://localhost:4000/student/${id}`);
   const [formData, setFormData] = useState({ name: '', email: '', phone_number: '', course: '' });
-  const [message, setMessage] = useState('');
-  const history = useHistory();
 
   useEffect(() => {
     if (student) {
@@ -20,8 +17,8 @@ const StudentDetails = () => {
         course: student.course,
       });
     }
-  }, [student]);
 
+  }, [student]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,23 +31,14 @@ const StudentDetails = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios.put(`http://localhost:4000/studentinfo/${id}`, formData)
-      .then((res) => {
-        setMessage('Student updated successfully.');
-        history.push(`/student-details/${id}`);
-      })
-      .catch((err) => {
-        console.error('Error updating student:', err);
-        setMessage('Error updating student: ' + err.message);
-      });
+      .then(() => alert('Student updated successfully.'))
+      .catch((err) => alert('Error updating student:', err));
   };
 
-  if (isLoading) {
-    return <p>Loading...</p>; 
-  }
+ 
 
   return (
     <form onSubmit={handleSubmit}>
-      {message && <Alert variant="success">{message}</Alert>}
       <div>
         <label>Update Student:</label>
         <input type="text" name="name" value={formData.name} onChange={handleChange} />
@@ -71,7 +59,7 @@ const StudentDetails = () => {
         <input type="text" name="course" value={formData.course} onChange={handleChange} />
       </div>
 
-      <Button variant="primary" type="submit" className="edit-btn">Edit</Button>
+      <button type="submit">Edit</button>
     </form>
   );
 }
